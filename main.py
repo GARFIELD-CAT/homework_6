@@ -26,7 +26,7 @@ def print_first_items_from_dict(count: int, data: Dict[str, Any]) -> None:
 
 
 def add_source_for_user_id_from_visit_log(file_path: str, purchases: Dict[str, Any]) -> None:
-    with open('funnel.csv', mode='w', encoding='cp1251') as w_file:
+    with open('funnel.csv', mode='w', encoding='utf-8') as w_file:
         names = ['user_id', 'source', 'category']
         file_writer = csv.DictWriter(w_file, delimiter=',', lineterminator='\r', fieldnames=names)
         file_writer.writeheader()
